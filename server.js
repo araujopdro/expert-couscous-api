@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const dotenv = require('dotenv').config()
 const port = process.env.PORT || 3000
 
@@ -6,6 +7,11 @@ const connectDB = require('./db')
 connectDB()
 
 const app = express()
+
+app.use(cors({
+    origin: "https://kaleidoscopic-torrone-d7dfee.netlify.app/",
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
+}))
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
