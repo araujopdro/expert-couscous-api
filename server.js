@@ -9,7 +9,7 @@ connectDB()
 const app = express()
 
 app.use(cors({
-    origin: "https://kaleidoscopic-torrone-d7dfee.netlify.app/",
+    origin: "*",
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
 }))
 
