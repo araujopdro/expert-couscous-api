@@ -18,7 +18,7 @@ app.use(function (req, res, next) {
     next()
 })
 
-app.get('/', (req, res) => {
+app.get('/api/test', (req, res) => {
     res.status(200).json({message: "resposta"})
 })
 
