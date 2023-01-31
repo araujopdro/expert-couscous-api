@@ -22,7 +22,7 @@ app.get('/api/test', (req, res) => {
     res.status(200).json({message: "resposta"})
 })
 
-app.use('/api/characters', require('./routes'))
+app.use('/api/teste', require('./routes'))
 
 
 app.listen(port, () => console.log(`Server Started ${port}`))
