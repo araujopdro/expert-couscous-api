@@ -15,7 +15,6 @@ app.use(express.urlencoded({extended: false}))
 console.log("routes")
 app.use('/api/characters', require('./routes'))
 
-
 app.listen(port, () => console.log(`Server Started ${port}`))
 
 const errorHandler = (err, req, res, next) => {
